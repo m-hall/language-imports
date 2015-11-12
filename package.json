@@ -1,0 +1,10 @@
+{
+  "name": "language-imports",
+  "version": "1.0.0",
+  "description": "Imports lanugage",
+  "repository": "https://github.com/m-hall/language-imports",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

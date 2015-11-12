@@ -1,0 +1,53 @@
+name: "Imports"
+scopeName: "source.imports"
+fileTypes: [
+	"Imports"
+]
+patterns: [
+	{
+		include: "#empty"
+	}
+	{
+		include: "#comment"
+	}
+	{
+		include: "#path"
+	}
+]
+repository:
+	empty:
+		match: "^\\s*$"
+		name: "empty.imports"
+	path:
+		begin: "^"
+		end: "$"
+		patterns: [
+			{
+				include: "#var"
+			}
+			{
+				include: "#imports"
+			}
+			{
+				include: "#json"
+			}
+			{
+				include: "#js"
+			}
+		]
+		name: "string.imports"
+	var:
+		match: "\\$[a-zA-Z0-9]*"
+		name: "support.type.variable.imports"
+	imports:
+		match: "\\.imports"
+		name: "constant.language.imports"
+	js:
+		match: "\\.js"
+		name: "keyword.imports"
+	json:
+		match: "\\.json"
+		name: "entity.other.attribute-name.imports"
+	comment:
+		match: "^\\/\\/.*$"
+		name: "comment.imports"
