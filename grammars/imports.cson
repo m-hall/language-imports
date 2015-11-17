@@ -40,13 +40,13 @@ repository:
 		match: "\\$[a-zA-Z0-9]*"
 		name: "support.type.variable.imports"
 	imports:
-		match: "\\.imports"
+		match: "[^\/\\\\]*\\.imports"
 		name: "constant.language.imports"
 	js:
-		match: "\\.js"
+		match: "[^\/\\\\]*\\.js"
 		name: "keyword.imports"
 	json:
-		match: "\\.json"
+		match: "[^\/\\\\]*\\.json"
 		name: "entity.other.attribute-name.imports"
 	comment:
 		match: "^\\/\\/.*$"
